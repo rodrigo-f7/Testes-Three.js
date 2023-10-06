@@ -1,0 +1,10 @@
+Este é o meu primeiro programa utilizando a biblioteca Three.js, biblioteca que proporciona elementos tridimensionais para o seu site
+Comando para importar a biblioteca:
+import * as THREE from 'three';
+
+Depois é necessário instalá-lo na pasta utilizando os comandos:
+
+npm install --save three
+npm install --save-dev vite
+
+O vite, por sinal, é um servidor para rodar o seu arquivo three.js

@@ -1,0 +1,9 @@
+Para realizar a renderização utilize uma função com o nome desejado: 
+
+Nesse caso, está havendo a chamada do renderizador ou loop de animação.
+function animate(){
+    requestAnimationFrame(animate)
+    renderer.render(scene,camera)
+}
+animate()
+Isso cria um loop que renderiza a animação (normalmente a 60 frames p segundo) toda vez que recarrega a página

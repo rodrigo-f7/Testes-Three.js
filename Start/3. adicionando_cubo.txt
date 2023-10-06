@@ -1,0 +1,20 @@
+Agora para adicionar um cubo vermelho será necessário os seguintes comandos:
+
+
+//Criando cubo
+//Nesse primeiro, utiliza-se três parâmetros para a criação: largura,altura,profundidade
+const geometry = new THREE.BoxGeometry(1,1,1);
+
+//Define-se o material do cubo, existem vários métodos porém esse será utilizado. Podem receber vários atributos, dentre eles a cor, nesse caso verde
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+
+//O Mesh une as características anteriores para criar o cubo, a forma e o material
+const cube = new THREE.Mesh(geometry, material)
+
+//Por padrão sempre adiciona nas coordenadas (0,0,0), o que implica na câmera estar dentro do cubo. Para modificar isso, mova a câmera um pouco
+scene.add( cube )
+
+camera.position.z = 5;
+
+Porém você perceberá que não existe cubo algum, pois a sua cena não foi renderizada, para isso utilize o comando do próximo documento
+

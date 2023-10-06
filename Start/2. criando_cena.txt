@@ -1,0 +1,18 @@
+Agora vamos criar uma cena no JavaScript. Para isso, é necessário usar esses comandos:
+
+const scene = new THREE.Scene();
+
+/*1º parâmetro é o FOV (campo de visão), dado em graus*/
+//2º parâmetro é a proporção de tela
+//3º e 4º parâmetro diz respeito à renderização dos objetos dado uma certa distância
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+//Em seguida o renderizador definido pela largura do documento
+//Você pode utilizar false para mudar a resolução do seu documento e assim ganhar mais performance na função setSize
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+
+//Adição do renderizador ao documento HTML
+document.body.appendChild( renderer.domElement );
+
+Nesses códigos estamos definindo o renderizador, a cena e a câmera.
